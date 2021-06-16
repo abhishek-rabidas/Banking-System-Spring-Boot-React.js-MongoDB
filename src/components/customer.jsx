@@ -20,12 +20,12 @@ function Customer(props){
         <td>{props.name}</td>
         <td>{props.email}</td>
         <td>{props.mobile}</td>
-        <td>{props.balance}</td>
+        <td>₹ {props.balance}</td>
         <td className="actions">
 
        <button className="list-btn delete" onClick={()=>deleteUser(props.id)}><i class="fas fa-trash-alt"></i></button>
       <Link  to={`/update?id=${props.id}`}><button className="list-btn edit"><i class="fas fa-user-edit"></i></button></Link>
-        
+        <Link to={`/sendmoney?id=${props.id}`}><button className="list-btn send"><img src="https://static.thenounproject.com/png/1647118-200.png" alt="" srcset="" /></button></Link>
 
         </td>
     </tr>);

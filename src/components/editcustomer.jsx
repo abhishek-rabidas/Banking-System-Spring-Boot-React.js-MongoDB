@@ -5,8 +5,6 @@ import {useLocation, Link} from "react-router-dom";
 import "../style/edit.css";
 function EditCustomer(){
 
-    const [user, setUser] = React.useState({});
-
     function formHandler(e){
 
        axios.post(`${base_url}/update`,customer).then((res)=>{
@@ -49,9 +47,7 @@ function EditCustomer(){
     <input onChange={(e)=>{
         setCustomer({...customer, mobile:e.target.value});
     }} placeholder="Mobile:" name="mobile" type="text" value={customer.mobile} />
-    <input onChange={(e)=>{
-        setCustomer({...customer, balance:e.target.value});
-    }} placeholder="Balance:" name="balance" type="number" value={customer.balance} />
+    <input placeholder="Balance:" name="balance" type="number" value={customer.balance} />
     <button type="submit">Update</button>
 <Link to="/view">
     <button type="reset">Cancel</button></Link>

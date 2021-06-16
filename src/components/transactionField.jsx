@@ -6,7 +6,7 @@ function TransactionField(props){
         <td>{props.id}</td>
         <td>{props.account_number}</td>
         <td>{props.holder}</td>
-        <td>{props.amount}</td>
+        <td>₹ {props.amount}</td>
  
     </tr>);
 }

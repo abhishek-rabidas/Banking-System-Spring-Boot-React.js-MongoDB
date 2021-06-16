@@ -7,6 +7,7 @@ import TransactionHistory from "./transactions";
 import Home from "./home";
 import NewCustomer from "./newcustomer";
 import EditCustomer from "./editcustomer";
+import Transfer from "./sendmoney2";
 function App(){
     return (<div>
     <Router>
@@ -18,6 +19,7 @@ function App(){
         <Route path="/transaction" component={TransactionHistory} exact/>
         <Route path="/new" component={NewCustomer} exact/>
         <Route path="/update" component={EditCustomer}/>
+        <Route path="/sendmoney" component={Transfer} />
     </Router>
     </div>);
 }

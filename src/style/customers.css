@@ -26,9 +26,10 @@
 }
 
 .actions {
-    width: 100px;
+    width: 150px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .list-btn {
@@ -45,6 +46,10 @@
 
 .edit {
     color: grey;
+}
+
+.send img {
+    width: 30px;
 }
 
 .add-btn {
