@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import base_url from "../api";
+import "../style/transactions.css"
 import TransactionField from "./transactionField";
 
 function TransactionHistory(){
@@ -12,11 +13,11 @@ function TransactionHistory(){
             setList(res.data);
         }, err=>{
             console.log("HISTORY NOT FETCHED");
-    }, []);
-});
+    });
+}, []);
 
 
-    return (<div>
+    return (<div id="transactions">
    <h1>Transaction History</h1>
    <table>
        <thead>

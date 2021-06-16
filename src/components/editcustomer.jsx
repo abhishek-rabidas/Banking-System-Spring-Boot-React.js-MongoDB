@@ -1,7 +1,8 @@
 import React from "react";
 import axios from "axios";
 import base_url from "../api";
-import {useLocation} from "react-router-dom";
+import {useLocation, Link} from "react-router-dom";
+import "../style/edit.css";
 function EditCustomer(){
 
     const [user, setUser] = React.useState({});
@@ -35,8 +36,8 @@ function EditCustomer(){
     }
 
     return (
-    <div>
-         <form onSubmit={formHandler}>
+    <div id="edit">
+         <form id="edit-form" onSubmit={formHandler}>
 
 <input name="id" type="number" placeholder="Account Number:" value={customer.id} />
     <input onChange={(e)=>{
@@ -52,7 +53,8 @@ function EditCustomer(){
         setCustomer({...customer, balance:e.target.value});
     }} placeholder="Balance:" name="balance" type="number" value={customer.balance} />
     <button type="submit">Update</button>
-    <button type="reset">Clear</button>
+<Link to="/view">
+    <button type="reset">Cancel</button></Link>
 </form>
 
     </div>

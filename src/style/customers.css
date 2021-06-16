@@ -1,0 +1,62 @@
+#customers {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#customers h1 {
+    margin: 20px 0px;
+}
+
+#customers table thead tr th {
+    padding: 10px;
+    background-color: whitesmoke;
+}
+
+#customers table tbody tr td {
+    text-align: center;
+    padding: 10px;
+}
+
+#customers table tbody tr:nth-child(2n-1) {
+    color: #457b9d;
+}
+
+.actions {
+    width: 100px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.list-btn {
+    font-size: 1.2rem;
+    background-color: white;
+    cursor: pointer;
+    padding: 10px;
+    border: 0;
+}
+
+.delete {
+    color: red;
+}
+
+.edit {
+    color: grey;
+}
+
+.add-btn {
+    align-self: flex-end;
+    margin-right: 50px;
+    border-radius: 300px;
+    padding: 15px 30px;
+    background-color: #1d3557;
+    color: #f1faee;
+    text-decoration: none;
+}
+
+.add-btn span {
+    margin-left: 10px;
+}

@@ -3,6 +3,7 @@ import Customer from "./customer";
 import base_url from "../api";
 import axios from "axios";
 import {Link} from "react-router-dom";
+import "../style/customers.css"
 function ViewAll(){
 
     const [customer, setCustomer] = React.useState([]);
@@ -20,16 +21,30 @@ function ViewAll(){
 
     }
 
-    return (<div>
+    return (<div id="customers">
    <h1>All Beneficiaries</h1>
-   <Link style={{border: "1px solid black", padding: "10px"}} to="/new">Add New Beneficiary</Link>
+   <Link className="add-btn" to="/new"><i class="fas fa-user-plus"></i><span>Add New Beneficiary</span></Link>
    <br/>
    <br />
-   {
+   <table>
+       <thead>
+       <tr>
+           <th>Account Number</th>
+           <th>Account Holder</th>
+           <th>Email</th>
+           <th>Phone Number</th>
+           <th>Available Balance</th>
+           <th>Actions</th>
+        </tr>
+       </thead>
+       <tbody>
+       {
        customer.map((item, index)=>{
         return <Customer key={index} id={item.id} name={item.name} email={item.email} mobile={item.mobile} balance={item.balance} />
        })
-   }
+       }
+       </tbody>
+       </table>
    
     </div>);
 }

@@ -1,0 +1,26 @@
+#transactions {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#transactions h1 {
+    margin: 20px 0px;
+}
+
+#transactions table thead tr th {
+    padding: 10px;
+    background-color: whitesmoke;
+}
+
+#transactions table tbody tr td {
+    text-align: center;
+    padding: 10px;
+}
+
+#transactions table tbody tr:nth-child(2n-1) {
+    color: #457b9d;
+}

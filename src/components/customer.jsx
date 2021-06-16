@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import {Link} from "react-router-dom";
 import base_url from "../api";
+import "../style/customers.css"
 function Customer(props){
 
   function deleteUser(id) {
@@ -13,16 +14,21 @@ function Customer(props){
     }
 
 
-    return (<div style={{border: "3px solid black", padding: "10px", marginBottom: "10px"}}>
-        <h3>{props.name}</h3>
-        <h6>Account Number: {props.id}</h6>
-        <h6>Email: {props.email}</h6>
-        <h6>Mobile: {props.mobile}</h6>
-        <h6>Available Balance: Rs. {props.balance}</h6>
-		<button onClick={()=>deleteUser(props.id)}>DELETE</button>
-        <br/>
-        <Link to={`/update?id=${props.id}`}><h3>Update</h3></Link>
-    </div>);
+    return (
+    <tr>
+        <td>{props.id}</td>
+        <td>{props.name}</td>
+        <td>{props.email}</td>
+        <td>{props.mobile}</td>
+        <td>{props.balance}</td>
+        <td className="actions">
+
+       <button className="list-btn delete" onClick={()=>deleteUser(props.id)}><i class="fas fa-trash-alt"></i></button>
+      <Link  to={`/update?id=${props.id}`}><button className="list-btn edit"><i class="fas fa-user-edit"></i></button></Link>
+        
+
+        </td>
+    </tr>);
 }
 
 export default Customer;

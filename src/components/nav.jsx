@@ -1,10 +1,11 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import "../style/nav.css"
 function Nav(){
     return (<nav>
                     <ul>
                         <Link to="/">
-                                      <li>Home</li>
+                                      <li>Dasboard</li>
                         </Link>
                          <Link to="/transfer">
                                      <li>Transfer Money</li>

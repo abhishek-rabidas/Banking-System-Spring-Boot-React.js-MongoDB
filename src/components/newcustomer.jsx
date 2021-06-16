@@ -2,6 +2,8 @@ import React from "react";
 import axios from "axios";
 import base_url from "../api";
 
+import "../style/new.css"
+
 function NewCustomer(){
     
     //var id=1;
@@ -20,9 +22,9 @@ function NewCustomer(){
     }
     
     
-    return (<div>
+    return (<div id="new">
 
-        <form onSubmit={formHandler}>
+        <form id="new-form" onSubmit={formHandler}>
 
         <input onChange={(e)=>{
                 setUser({...user, id:e.target.value})

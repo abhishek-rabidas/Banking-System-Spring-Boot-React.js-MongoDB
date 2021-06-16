@@ -1,7 +1,7 @@
 import React from "react";
-
+import "../style/transactions.css"
 function TransactionField(props){
-    return (<tr style={{textAlign:"center"}} >
+    return (<tr>
    
         <td>{props.id}</td>
         <td>{props.account_number}</td>

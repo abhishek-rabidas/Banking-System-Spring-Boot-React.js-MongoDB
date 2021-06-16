@@ -1,0 +1,32 @@
+#dashboard {
+    padding: 25px 10px;
+    height: 100vh;
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+
+#profile {
+    position: absolute;
+    right: 0;
+    display: flex;
+    width: 300px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#profile p {
+    color: black;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#profile img {
+    border-radius: 100%;
+    width: 20%;
+}
+
+#widget-headline {
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
