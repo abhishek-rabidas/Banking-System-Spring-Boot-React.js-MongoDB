@@ -14,7 +14,7 @@ function TransactionHistory(){
         }, err=>{
             console.log("HISTORY NOT FETCHED");
     });
-}, []);
+}, [list]);
 
 
     return (<div id="transactions">
