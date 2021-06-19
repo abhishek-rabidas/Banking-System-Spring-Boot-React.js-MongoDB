@@ -12,7 +12,6 @@ function App(){
     return (<div>
     <Router>
     <Nav/>
-    <hr/>
         <Route path="/view" component={ViewAll} exact/>
         <Route path="/transfer" component={SendMoney} exact/>
         <Route path="/" component={Home} exact/>

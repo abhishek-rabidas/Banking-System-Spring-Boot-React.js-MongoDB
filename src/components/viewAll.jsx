@@ -25,7 +25,8 @@ function ViewAll(){
    <h1>All Beneficiaries</h1>
    <Link className="add-btn" to="/new"><i class="fas fa-user-plus"></i><span>Add New Beneficiary</span></Link>
    <br/>
-   <br />
+   <br/>
+   <div id="table-wrapper">
    <table>
        <thead>
        <tr>
@@ -45,7 +46,7 @@ function ViewAll(){
        }
        </tbody>
        </table>
-   
+       </div>
     </div>);
 }
 
